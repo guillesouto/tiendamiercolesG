@@ -31,7 +31,7 @@ console.log(productos2[0])
 //controlando etiquetas
 
 //1. crear una variable para guardar etiqueT 
-let etiquetaTitulo = document.getElementById("titulo")
+/*let etiquetaTitulo = document.getElementById("titulo")
 console.log(etiquetaTitulo)
 
 //2 COMO MODIFICAR ETIQUETAs
@@ -47,5 +47,24 @@ etiquetaFoto.src="img/dT9rbg8ac.png"
 
 //cambiar el estilo de la etiqueta
 etiquetaTitulo.classList.add("text-center")
-etiquetaTitulo.classList.add("text-danger")
+etiquetaTitulo.classList.add("text-danger")*/
 
+//TIENDA----------------------------------------------------------------------------------------------------------------------------------------------- 
+let productosNombre=["Spiderbuggy","camiseta spiderman"]
+let productosPrecio=[350000,80000]
+let productosPromocion=[true,false]
+
+console.log(productosNombre)
+console.log(productosNombre[1])
+
+//creando objetos con JS
+let usuario={
+
+    nombre:"Bruno diaz",
+    edad:"14",
+    amigos:["gatubela", "Mr freeze", "joker"]
+
+}
+
+console.log(usuario)
+console.log(usuario.amigos[1])
