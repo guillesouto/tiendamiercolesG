@@ -50,9 +50,9 @@ etiquetaTitulo.classList.add("text-center")
 etiquetaTitulo.classList.add("text-danger")*/
 
 //TIENDA----------------------------------------------------------------------------------------------------------------------------------------------- 
-let productosNombre=["Spiderbuggy","camiseta spiderman"]
-let productosPrecio=[350000,80000]
-let productosPromocion=[true,false]
+let productosNombres=["Spiderbuggy","camiseta spiderman"]
+let productosPrecios=[350000,80000]
+let productosPromociones=[true,false]
 
 console.log(productosNombre)
 console.log(productosNombre[1])
