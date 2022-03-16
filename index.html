@@ -28,66 +28,125 @@
                 <a class="nav-link" href="mercancia.html">Mercancia</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#"></a>
               </li>
             </ul>
           </div>
         </div>
     </nav>
   </header>
-    <main>
-        <img src="img/spiderm1.jpg" alt="foto banner" class="img-fluid w-100">
-        
-    <section>
-        <div class="container mt-5">
-            <div class="row">
-                <div class="col-8 align-self-center">
-                    <h3 id="titulo01"> INTRODUCCION A LA CALISTENIA Y GIMNASIA </h3>
-                    <p> 
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis dignissimos sunt libero veritatis deserunt atque eum voluptate? Quaerat iste, natus laboriosam molestias dolores, eaque labore excepturi voluptates alias, voluptate cum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis cum vel molestiae voluptatum assumenda aliquam itaque tenetur quod sint nisi nostrum ducimus doloremque, magni sequi nemo reprehenderit iste laborum numquam?Lorem ipsum dolor sit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos quis repellat, libero molestias animi sint suscipit, aut, expedita natus voluptates numquam inventore quibusdam quo soluta. Earum maxime tempore nemo dignissimos
-                    </p>
-                    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                        Button with data-bs-target
-                    </button>
+  <main>
+        <!-- CARRUSEL DE FOTOS -->
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="/img/spiderm1.jpg" class="d-block w-100" height="650px" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5> el Heroe enmascarado</h5>
+                  <p>Repasa un poco de la Grandiosa Historia de Peter B. Parker</p>
                 </div>
-                <div class="col-4">
-                    <img id="calistenic" src="img/onebar.jpg" alt="foto 2" class="w-100 img-fluid">
+              </div>
+              <div class="carousel-item">
+                <img src="/img/StanLee&SteveDitkoxSpidi.jpg" class="d-block w-100" height="650px" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Leyendas detras del Mayitas</h5>
+                  <p>Mira un poco de la Historia de como Lee y Ditko nos dieron este Heroe</p>
                 </div>
+              </div>
+              <div class="carousel-item">
+                <img src="/img/spiderverseO.o.jpg" class="d-block w-100" height="650px" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Mira nuestros productos</h5>
+                  <p>en Mercancias podras ver lo que ha hecho nuesto aracnido favorito</p>
+                </div>
+              </div>
             </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-    </section>
-    </main>
-
+    
+      <!-- APARTADOS DATOS Y FOTOS -->
     <section>
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <div class="container mt-5">
+
+        <!-- APARTADO INICIOS DEL PERSONAJE -->
+        <hr class="featurette-divider">
+
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading">Spiderman <span class="text-muted">El amigable vecino de NY</span></h2>
+              <p class="lead">Ya muchos conocemos la iconica historia del adolecente que fue mordido por una araña radioactiva en un paseo de 
+                la escuela a una feria de ciencias, que a pesar de la logica de nuestro universo, esta picadura le daria un cambio
+                radical a su vida convirtienodolo en el sorprendente hombre araña dotandolo de todos los poderes proporcionales
+                de una araña. Pero esto ya muchos lo saben asi qeu veamos quien er este joven Peter parker y como nacio de las brillantes
+                mentes de Stan Lee y Steve Ditko 
+              </p>
             </div>
-            <div class="offcanvas-body">
-              <div>
-                Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
-              </div>
-              <div class="dropdown mt-3">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
-                  Dropdown button
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </div>
+            <div class="col-md-5">
+              <img id="Historia" src="img/Peter&spidy.jpg" alt="foto 2" class="w-100 img-fluid">
             </div>
           </div>
-    </section>
-    <h4 id="titulo" class="verdolaga"> Verde a morir </h4>
-    <img src="img/spider-man-arts-vector.png" alt="foto" id="fotospider">
 
-    <footer></footer>
-    
-    <h4 id="titulo2">OELO</h4>
-    <button id="boton" type="button" class="btn btn-info">clic</button>
+        <!-- APARTADO CREACION Y AUTORIA -->
+        <hr class="featurette-divider">
+      
+          <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+              <h2 class="featurette-heading">Creacion del Heroe <span class="text-muted">hecho por dos leyendas.</span></h2>
+              <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+              <img id="Creacion" src="img/StanLee&SteveDitkoxSpidi.jpg" alt="foto 2" class="w-100 img-fluid">
+            </div>
+          </div>
+
+        <!-- APARTADO CINEMATOGRAFIA -->      
+        <hr class="featurette-divider">
+      
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading">La gran pantalla. <span class="text-muted">y el lugar en la cultura Pop.</span></h2>
+              <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+            </div>
+            <div class="col-md-5">
+              <img id="CINE" src="img/SpidyCINE.jpg" alt="foto 2" class="w-100 img-fluid">
+            </div>
+          </div>
+
+        <!-- APARTADO CURIOSIDADES -->
+        <hr class="featurette-divider">
+      
+          <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+              <h2 class="featurette-heading">Si es una Araña. <span class="text-muted">Porque no darle 8 brazos.</span></h2>
+              <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+              <img id="Curiosidades" src="img/PiensaPeterPiensa.jpg" height="200px" width="400px" alt="foto 2" class="w-100 img-fluid">
+            </div>
+          </div>
+      
+        <hr class="featurette-divider">
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+    <footer class="container">
+      <p class="float-end"><a href="#">Volver al inicio</a></p>
+      <p>Guillermo Souto  · <a href="https://www.instagram.com/guillesouto20/?hl=es-la">@guillesouto20</a> · <a></a></p>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
