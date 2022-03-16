@@ -2,17 +2,20 @@
 
 let productos=[
 
-    {foto: "img/SpiderbuggyFunko.jpg", nombre:"spiderBuggy", precio:420000,descripcion:"spiderBuggy a escala por marca Funko"},
-    {foto: "img/camisetaSpiderman.jpg", nombre:"Camisetas Gimnasio Marvel Lycra Spiderman", precio:85000,descripcion:"camiseta 3D Marvel"},
-    {foto: "img/mascaracosplay.jpg", nombre:"Máscara de Spiderman XXF Home coming– Máscara de Spiderman Cosplay Hero para adultos (rojo)", precio:128972,descripcion:""},
-    {foto: "img/gold_Spiderman_NoWayHome.jpg", nombre:"Figura De Acción Spiderman Gold No Way Home Marvel Legends", precio:134900,descripcion:""},
-    {foto: "img/funko_ironSpider.jpg", nombre:"Funko Pop Spiderman Iron Spider Avengers Infinity War 300", precio:69490,descripcion:""},
-    {foto: "img/VideojuegoSpidermanMarvelPS4.jpg", nombre:"Videojuego Marvel Spider-Man PS4 Fisico", precio:0,descripcion:""},
-    {foto: "img/Gauntes_lanzatelarañas.jpg", nombre:"Guantes Spider Man Con Luces Original Tienda Disney", precio:199000,descripcion:"disparadores con linternas con icono del aracnido favorito"},
-    {foto: "img/spiderman_WHAT_IF.jpg", nombre:"Spiderman Zombie Hunter Marvel Legends Avenger What If", precio:162900,descripcion:""},
-    {foto: "img/MilesMoralesPS5.jpg", nombre:"Marvel's Spider-Man: Miles Morales Ultimate Launch Edition Sony PS5 Físico", precio:379990,descripcion:""},
-    {foto: "img/llavero_funko.jpg", nombre:"Llavero Funko Pop: Spider-man", precio:34900,descripcion:""},
-    {foto: "img/noWayHomeCosplay.jpg", nombre:"Traje Cosplay Spiderman No Way Home", precio:129500,descripcion:""}
+    {foto: "img/SpiderbuggyFunko.jpg", nombre:"spiderBuggy", precio:420.000,descripcion:"Figura colecionable, de la empresa Funko, del tan curioso Spider-Buggy de los comics clasicos."},
+    {foto: "img/funko_ironSpider.jpg", nombre:"Funko Pop Spiderman Iron Spider Avengers Infinity War 300", precio:69.490,descripcion:"Figura colecionable, de la empresa Funko, del traje de IronSpider aparecido en las recientes peliculas de la serie Home."},
+    {foto: "img/mascaracosplay.jpg", nombre:"Máscara de Spiderman XXF Home coming– Máscara de Spiderman Cosplay Hero para adultos (rojo)", precio:128.972,descripcion:"mascara habilitada para el uso del aracnido talla unica."},
+    {foto: "img/VideojuegoSpidermanMarvelPS4.jpg", nombre:"Videojuego Marvel Spider-Man PS4 Fisico", precio:126.313,descripcion:"Videojuego original Ganador al premio de juego del año, dirigido a PlayStation 4."},
+    {foto: "img/camisetaSpiderman.jpg", nombre:"Camisetas Gimnasio Marvel Lycra Spiderman", precio:85.000,descripcion:"camiseta 3D Marvel"},
+    {foto: "img/gold_Spiderman_NoWayHome.jpg", nombre:"Figura De Acción Spiderman Gold No Way Home Marvel Legends", precio:134.900,descripcion:"Figura colecionable, de la empresa Hasbro, del traje de black&gold aparecido en la reciente pelicula de No Way Home."},
+    {foto: "img/LansaTelarañas.jpg", nombre:"Lanza Telarañas", precio:34.450,descripcion:"disparadores lansa telarañas, de la empresa Hasbro, disparan pequeños discos de goma con forma de telarañas."},
+    {foto: "img/llavero_funko.jpg", nombre:"Llavero Funko Pop: Spider-man", precio:34.900,descripcion:"Figura colecionable, de la empresa Funko, del traje de original de los comics a tamaño llavero incluido como colgante."},
+    {foto: "img/noWayHomeCosplay.jpg", nombre:"Traje Cosplay Spiderman No Way Home", precio:179.900,descripcion:"Traje para hombres adultos, cuerpo completo del disfras visto en la pelicula No Way Home."},
+    
+    {foto: "img/spiderman_WHAT_IF.jpg", nombre:"Spiderman Zombie Hunter Marvel Legends Avenger What If", precio:162.900,descripcion:"Figura colecionable, de la empresa Hasbro, del traje de Zombie Hunter aparecido en la reciente serie de Marvel WHAT IF... "},
+    {foto: "img/MilesMoralesPS5.jpg", nombre:"Marvel's Spider-Man: Miles Morales Ultimate Launch Edition Sony PS5 Físico", precio:129.500,descripcion:"Ultimo juego de la franquisia Lanzado para la consola, propia de SONY, PlayStation 5 actualmente disponible para PC."},
+    
+    
 ]
 
 console.log(productos)
@@ -48,6 +51,16 @@ foto.src=producto.foto
 let nombre=document.createElement("h4")
 nombre.classList.add("text-center")
 nombre.textContent=producto.nombre
+
+//k4 con la clase text-center
+let precio=document.createElement("h5")
+precio.classList.add("text-center")
+precio.textContent=producto.precio
+
+//k4 con la clase text-center
+let descripcion=document.createElement("h5")
+descripcion.classList.add("text-center")
+descripcion.textContent=producto.descripcion
 
 //3. padres e hijos
 tarjeta.appendChild(foto)
