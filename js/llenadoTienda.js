@@ -45,21 +45,44 @@ tarjeta.classList.add("h-100")
 //img con la clase card-img-top
 let foto=document.createElement("img")
 foto.classList.add("card-img-top")
+foto.classList.add("rounded")
 foto.src=producto.foto
 
-//k4 con la clase text-center
+//h4 con la clase text-center
 let nombre=document.createElement("h4")
 nombre.classList.add("text-center")
 nombre.textContent=producto.nombre
 
-//k4 con la clase text-center
-let precio=document.createElement("h5")
-precio.classList.add("text-center")
+//un Button en el precio para iniciar compra
+let precio=document.createElement("button")
+precio.classList.add("btn")
+precio.classList.add("btn-primary")
 precio.textContent=producto.precio
 
-//k4 con la clase text-center
-let descripcion=document.createElement("h5")
+// BUENO PROFE AQUI IRIA EL EVENTLISTENER PARA POPEAR UN OFFCANVAS O UN COLLAPSE
+//YA MUCHOSTUTORIALES Y MIS OJOS ME DUELEN :( Y AUN NO LE COJO LA ONDA
+
+/*precio.addEventListener("click", () =>{
+    var myCollapse = document.getElementById("myCollapse");
+
+    myCollapse.addEventListener("hidden.bs.collapse", () =>{
+        alert("Collapsible element has been completely closed.");
+    });
+});*/
+
+//Creamos el desplegable sea un COLLAPSE o un OFFCANVAS que va a contener nuestra descripcion
+//OFFCANVAS tambien puede contener un formulario de compra
+
+/*let desplegable=document.createElement("collapse")
+desplegable.classList.add("show")*/
+
+//damos la descripcion pa antojar
+let descripcion=document.createElement("card")
+descripcion.classList.add("card-body")
+descripcion.classList.add("card-subtitle")
 descripcion.classList.add("text-center")
+descripcion.classList.add("mb-2")
+descripcion.classList.add("text-muted")
 descripcion.textContent=producto.descripcion
 
 //3. padres e hijos
@@ -68,6 +91,8 @@ tarjeta.appendChild(nombre)
 
 tarjeta.appendChild(precio)
 tarjeta.appendChild(descripcion)
+/*tarjeta.appendChild(desplegable)
+desplegable.appendChild(descripcion)*/
 
 
 columna.appendChild(tarjeta)
