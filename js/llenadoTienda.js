@@ -1,6 +1,6 @@
 //creando un arreglo de objetos
 
-let productos=[
+var productos=[
 
     {foto: "img/SpiderbuggyFunko.jpg", nombre:"spiderBuggy", precio:420.000,descripcion:"Figura colecionable, de la empresa Funko, del tan curioso Spider-Buggy de los comics clasicos."},
     {foto: "img/funko_ironSpider.jpg", nombre:"Funko Pop Spiderman Iron Spider Avengers Infinity War 300", precio:69.490,descripcion:"Figura colecionable, de la empresa Funko, del traje de IronSpider aparecido en las recientes peliculas de la serie Home."},
@@ -26,9 +26,9 @@ let fila=document.getElementById("fila")
 //COMO RECORRERO UN ARREGLO CON JS
 //1. TENER ARREGLO
 productos.forEach(function(producto){
-    console.log(producto.nombre)
-    console.log(producto.precio)
-    console.log(producto.foto)
+ //console.log(producto.nombre)
+ //console.log(producto.precio)
+ //console.log(producto.foto)
 
 //2.pintando etiquetas
 
@@ -44,8 +44,7 @@ tarjeta.classList.add("h-100")
 
 //img con la clase card-img-top
 let foto=document.createElement("img")
-foto.classList.add("card-img-top")
-foto.classList.add("rounded")
+foto.classList.add("card-img-top", "h-100","h-100","d-block", "rounded")
 foto.src=producto.foto
 
 //h4 con la clase text-center
@@ -54,10 +53,15 @@ nombre.classList.add("text-center")
 nombre.textContent=producto.nombre
 
 //un Button en el precio para iniciar compra
-let precio=document.createElement("button")
-precio.classList.add("btn")
-precio.classList.add("btn-primary")
+let precio=document.createElement("h5")
+precio.classList.add("text-center")
 precio.textContent=producto.precio
+
+//un Button en el precio para iniciar compra
+let boton=document.createElement("button")
+boton.classList.add("btn", "btn-info", "w-50", "d-block", "mx-auto", "mt-4")
+boton.setAttribute("type", "button")
+boton.textContent= "ampliar info"
 
 // BUENO PROFE AQUI IRIA EL EVENTLISTENER PARA POPEAR UN OFFCANVAS O UN COLLAPSE
 //YA MUCHOSTUTORIALES Y MIS OJOS ME DUELEN :( Y AUN NO LE COJO LA ONDA
@@ -78,11 +82,7 @@ desplegable.classList.add("show")*/
 
 //damos la descripcion pa antojar
 let descripcion=document.createElement("card")
-descripcion.classList.add("card-body")
-descripcion.classList.add("card-subtitle")
-descripcion.classList.add("text-center")
-descripcion.classList.add("mb-2")
-descripcion.classList.add("text-muted")
+descripcion.classList.add("card-body", "card-subtitle", "text-center", "mb-2", "text-muted")
 descripcion.textContent=producto.descripcion
 
 //3. padres e hijos
@@ -90,6 +90,7 @@ tarjeta.appendChild(foto)
 tarjeta.appendChild(nombre)
 
 tarjeta.appendChild(precio)
+tarjeta.appendChild(boton)
 tarjeta.appendChild(descripcion)
 /*tarjeta.appendChild(desplegable)
 desplegable.appendChild(descripcion)*/
@@ -99,4 +100,25 @@ columna.appendChild(tarjeta)
 fila.appendChild(columna)
 
 
+})
+
+//rutina para ampliar informacion del producto
+let filaContenedora =document.getElementById("fila")
+filaContenedora.addEventListener("click", function(evento){
+
+    if(evento.target.classList.contains("btn")){
+
+        console.log(evento.target.parentElement.querySelector("h4").textContent)
+        console.log(evento.target.parentElement.querySelector("img").src)
+
+        let fotoinfo=document.getElementById("fotoinfo")
+        fotoinfo.src= evento.target.parentElement.querySelector("img").src
+
+        let tituloinfo=document.getElementById("tituloinfo")
+        tituloinfo.textContent=evento.target.parentElement.querySelector("h4").textContent
+
+        let modalinfo = new bootstrap.Modal(document.getElementById('modalinfo'))
+        modalinfo.show()
+
+    }
 })
