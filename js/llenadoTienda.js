@@ -1,5 +1,5 @@
-//creando un arreglo de objetos
-
+export function llenarTienda(){
+    //creando un arreglo de objetos
 var productos=[
 
     {foto: "img/SpiderbuggyFunko.jpg", nombre:"spiderBuggy", precio:420.000,descripcion:"Figura colecionable, de la empresa Funko, del tan curioso Spider-Buggy de los comics clasicos."},
@@ -53,7 +53,7 @@ nombre.classList.add("text-center")
 nombre.textContent=producto.nombre
 
 //un Button en el precio para iniciar compra
-let precio=document.createElement("h5")
+let precio=document.createElement("h3")
 precio.classList.add("text-center")
 precio.textContent=producto.precio
 
@@ -63,62 +63,21 @@ boton.classList.add("btn", "btn-info", "w-50", "d-block", "mx-auto", "mt-4")
 boton.setAttribute("type", "button")
 boton.textContent= "ampliar info"
 
-// BUENO PROFE AQUI IRIA EL EVENTLISTENER PARA POPEAR UN OFFCANVAS O UN COLLAPSE
-//YA MUCHOSTUTORIALES Y MIS OJOS ME DUELEN :( Y AUN NO LE COJO LA ONDA
-
-/*precio.addEventListener("click", () =>{
-    var myCollapse = document.getElementById("myCollapse");
-
-    myCollapse.addEventListener("hidden.bs.collapse", () =>{
-        alert("Collapsible element has been completely closed.");
-    });
-});*/
-
-//Creamos el desplegable sea un COLLAPSE o un OFFCANVAS que va a contener nuestra descripcion
-//OFFCANVAS tambien puede contener un formulario de compra
-
-/*let desplegable=document.createElement("collapse")
-desplegable.classList.add("show")*/
-
 //damos la descripcion pa antojar
-let descripcion=document.createElement("card")
+let descripcion=document.createElement("p")
 descripcion.classList.add("card-body", "card-subtitle", "text-center", "mb-2", "text-muted")
 descripcion.textContent=producto.descripcion
 
 //3. padres e hijos
 tarjeta.appendChild(foto)
 tarjeta.appendChild(nombre)
-
 tarjeta.appendChild(precio)
-tarjeta.appendChild(boton)
 tarjeta.appendChild(descripcion)
-/*tarjeta.appendChild(desplegable)
-desplegable.appendChild(descripcion)*/
-
+tarjeta.appendChild(boton)
 
 columna.appendChild(tarjeta)
 fila.appendChild(columna)
 
 
 })
-
-//rutina para ampliar informacion del producto
-let filaContenedora =document.getElementById("fila")
-filaContenedora.addEventListener("click", function(evento){
-
-    if(evento.target.classList.contains("btn")){
-
-        console.log(evento.target.parentElement.querySelector("h4").textContent)
-        console.log(evento.target.parentElement.querySelector("img").src)
-
-        let fotoinfo=document.getElementById("fotoinfo")
-        fotoinfo.src= evento.target.parentElement.querySelector("img").src
-
-        let tituloinfo=document.getElementById("tituloinfo")
-        tituloinfo.textContent=evento.target.parentElement.querySelector("h4").textContent
-
-        let modalinfo = new bootstrap.Modal(document.getElementById('modalinfo'))
-        modalinfo.show()
-
-    }
-})
+}
