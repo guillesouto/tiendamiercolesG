@@ -44,7 +44,7 @@ tarjeta.classList.add("h-100")
 
 //img con la clase card-img-top
 let foto=document.createElement("img")
-foto.classList.add("card-img-top", "h-100","h-100","d-block", "rounded")
+foto.classList.add("card-img-top", "h-100","w-100","d-block", "rounded")
 foto.src=producto.foto
 
 //h4 con la clase text-center
