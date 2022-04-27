@@ -26,12 +26,12 @@ filaContenedora.addEventListener("click", function(evento){
 
 //rutina para añadir un producto al carrito de compras
 let carrito = []
-let cantidad = document.getElementById("contadorProductos").value
-
 let btnAgregarCarrito = document.getElementById("botonadd")
 btnAgregarCarrito.addEventListener("click", function(){
 
-    //Debo capturar la cantidad y agregarla al producto 
+
+    //Debo capturar la cantidad y agregarla al producto
+    let cantidad = document.getElementById("contadorProductos").value
     producto.cantidad=cantidad
     console.log(cantidad)
 
@@ -58,12 +58,9 @@ let btnLimpiarCarrito = document.getElementById("botonlimp")
 btnLimpiarCarrito.addEventListener("click", function(){
 
     carrito=[]
-    //console.log(carrito)
 
     let capsula = document.getElementById("capsula")
     capsula.classList.add("invisible")
-    //console.log("se vacio el carrito")
-    modalinfo.hide()
 
 })
 
@@ -96,13 +93,13 @@ btnVerCarrito.addEventListener("click", function(){
         name.textContent= producto.nombre
 
         let costo=document.createElement("h6")
-        costo.textContent= producto.precio
+        costo.textContent= "precio: " + producto.precio
 
         let cantidad=document.createElement("h6")
-        cantidad.textContent= producto.cantidad
+        cantidad.textContent= "cantidad: "+ producto.cantidad
 
         let subtotal=document.createElement("h6")
-        subtotal.textContent = producto.cantidad * producto.costo
+        subtotal.textContent = "sub-total: "+ (producto.cantidad * producto.costo)
 
         //PADRE E HIJOS
         columna1.appendChild(foto)
@@ -117,6 +114,9 @@ btnVerCarrito.addEventListener("click", function(){
         base.appendChild(fila)
 
     })
+
+    /*let total=document.getElementById("TotalTienda")
+    total.textContent= */
     
     modalcompra.show()
 
