@@ -6,6 +6,8 @@ export function ampliarInfoProducto(evento){
     //lleno la informacion del producto
     producto.foto = evento.target.parentElement.querySelector("img").src
     producto.nombre =evento.target.parentElement.querySelector("h3").textContent
+    producto.precio = evento.target.parentElement.querySelector("h5").textContent
+    producto.descripcion = evento.target.parentElement.querySelector("p").textContent
 
 
     let fotoinfo=document.getElementById("fotoinfo")

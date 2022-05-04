@@ -18,14 +18,18 @@ filaContenedora.addEventListener("click", function(evento){
     if(evento.target.classList.contains("btn")){
 
         producto=ampliarInfoProducto(evento)
+        //rutina para Resetear la cantidad al abrir
+        document.getElementById("contadorProductos").value = "1";
         console.log(producto)
         modalinfo.show()
     }
 
 })  
 
-//rutina para añadir un producto al carrito de compras
+//dejamos el carrito bacio ara iniciar
 let carrito = []
+
+//rutina para añadir un producto al carrito de compras
 let btnAgregarCarrito = document.getElementById("botonadd")
 btnAgregarCarrito.addEventListener("click", function(){
 
@@ -61,6 +65,7 @@ btnLimpiarCarrito.addEventListener("click", function(){
 
     let capsula = document.getElementById("capsula")
     capsula.classList.add("invisible")
+    modalcompra.hide()
 
 })
 
@@ -93,13 +98,13 @@ btnVerCarrito.addEventListener("click", function(){
         name.textContent= producto.nombre
 
         let costo=document.createElement("h6")
-        costo.textContent= "precio: " + producto.precio
+        costo.textContent= "precio: COL$" + producto.precio
 
         let cantidad=document.createElement("h6")
         cantidad.textContent= "cantidad: "+ producto.cantidad
 
         let subtotal=document.createElement("h6")
-        subtotal.textContent = "sub-total: "+ (producto.cantidad * producto.costo)
+        subtotal.textContent = "sub-total: COL$"+ (producto.cantidad * producto.precio)
 
         //PADRE E HIJOS
         columna1.appendChild(foto)
@@ -122,3 +127,4 @@ btnVerCarrito.addEventListener("click", function(){
 
 
 })
+
