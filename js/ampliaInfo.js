@@ -22,6 +22,7 @@ export function ampliarInfoProducto(evento){
     let precinfo=document.getElementById("precinfo")
     precinfo.textContent=evento.target.parentElement.querySelector("h5").textContent
 
+
     //devolver el producto general
     return producto 
 

@@ -39,6 +39,13 @@ btnAgregarCarrito.addEventListener("click", function(){
     producto.cantidad=cantidad
     console.log(cantidad)
 
+    //establecemos el valor del subtotal
+    producto.subtotal = producto.cantidad * producto.precio
+
+    //al agregar productos al carrito le eliminaremos la clase invisible al monto total
+    let COLpesos = document.getElementById("TotCOL")
+    COLpesos.classList.remove("invisible")
+
     //agrego el producto al carrito
     carrito.push(producto)
     
@@ -104,7 +111,8 @@ btnVerCarrito.addEventListener("click", function(){
         cantidad.textContent= "cantidad: "+ producto.cantidad
 
         let subtotal=document.createElement("h6")
-        subtotal.textContent = "sub-total: COL$"+ (producto.cantidad * producto.precio)
+        subtotal.textContent = "sub-total: COL$"+ producto.subtotal
+        
 
         //PADRE E HIJOS
         columna1.appendChild(foto)
@@ -118,13 +126,49 @@ btnVerCarrito.addEventListener("click", function(){
         fila.appendChild(columna2)
         base.appendChild(fila)
 
+    })    
+
+    //leemos los subtotales y los sumamos para crear el total
+    let total= 0
+    carrito.forEach(function(producto){
+        total = total + Number(producto.subtotal)
+        //agregamos el atributo toatal a producto 
+        producto.total = total
     })
+    let totalCarrito=document.getElementById("valuetotalpeso")
+        totalCarrito.textContent = total      
+        console.log(totalCarrito)
 
-    /*let total=document.getElementById("TotalTienda")
-    total.textContent= */
-    
     modalcompra.show()
-
 
 })
 
+//rutina para cambiar el valor total a dolares
+let btnpesoDolar = document.getElementById("btnpesodollar")
+btnpesoDolar.addEventListener("click", function(){
+    
+    let cambio = 0
+    carrito.forEach(function(producto){
+        cambio = cambio + Number(producto.total) * 4049
+        //agregamos el atributo toatal a producto 
+        producto.totaldolares = cambio
+    })
+
+    let dollars = document.getElementById("valuetotaldolar")
+    dollars.textContent= cambio
+    console.log(dollars)
+
+    //ya con el calculo en dolares quitamos el taributo invisible 
+    let USDolares = document.getElementById("TotUSD")
+    USDolares.classList.remove("invisible")
+    //al mostrar la etiqueta en dolares volveremos invisible la etiqueta en pesos
+    let COLpesos = document.getElementById("TotCOL")
+    COLpesos.classList.add("invisible")
+
+
+
+    //agregamos el atributo total en dolares a producto 
+    producto.totalDolares = dollars
+    console.log(cantidad)
+
+})
